@@ -149,7 +149,7 @@ Fgeoip_city(emacs_env *env, ptrdiff_t nargs, emacs_value args[], void *data)
 	GeoIPRecord *gir = env->get_user_ptr(env, args[0]);
 	if (gir->city == NULL)
 		return env->make_string(env, "N/A", 3);
-	fprintf(stderr, "city=%s\n", gir->city);
+
 	return env->make_string(env, gir->city, strlen(gir->city));
 }
 
